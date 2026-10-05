@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Buddy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- FIRST PAGE -->
+<section id="frontPage" class="front-page">
+    <div class="front-box">
+        <div class="logo">💪</div>
+        <h1>FIT BUDDY</h1>
+        <h2>Personalized Fitness Plan Generator</h2>
+        <p>Your Personal Fitness Assistant</p>
+        <p><b>PROJECT PRESENTED BY</b></p>
+        <p><b>ABHIRAMI</b></p>
+        <button onclick="showApp()">Start Your Fitness Journey →</button>
+    </div>
+</section>
+
+<!-- MAIN FIT BUDDY APP -->
+<section id="appPage" class="app-page" style="display:none;">
+    <div class="container">
+
+        <button class="back-button" onclick="showFrontPage()">← Back to Home</button>
+
+        <h1>💪 FIT BUDDY</h1>
+        <p>AI-Powered Personalized Fitness Plan Generator</p>
+
+        <div class="form-box">
+            <input type="text" id="name" placeholder="Enter your name">
+            <input type="number" id="age" placeholder="Enter your age">
+            <input type="number" id="height" placeholder="Height (cm)">
+            <input type="number" id="weight" placeholder="Weight (kg)">
+
+            <select id="goal">
+                <option value="">Select Fitness Goal</option>
+                <option value="Weight Loss">Weight Loss</option>
+                <option value="Weight Gain">Weight Gain</option>
+                <option value="Fitness">General Fitness</option>
+            </select>
+
+            <button onclick="generatePlan()">Generate Fitness Plan</button>
+        </div>
+
+        <div id="result"></div>
+
+        <div class="video-slot">
+            <h2>🎥 Workout Video</h2>
+            <p>Choose a workout video from your laptop to preview it here.</p>
+            <input type="file" id="videoFile" accept="video/*" onchange="loadWorkoutVideo(event)">
+            <video id="workoutVideo" controls></video>
+        </div>
+
+        <div class="info-box">
+            <h2>📖 About Fit Buddy</h2>
+            <p>Fit Buddy is a personalized fitness plan generator that creates simple fitness guidance based on user details and goals.</p>
+
+            <h2>⚙️ How It Works</h2>
+            <p>1️⃣ Enter your personal details.</p>
+            <p>2️⃣ Select your fitness goal.</p>
+            <p>3️⃣ Click Generate Fitness Plan.</p>
+            <p>4️⃣ Get your personalized fitness suggestions.</p>
+        </div>
+
+        <footer>
+            <p>© 2026 Fit Buddy | Personalized Fitness Assistant</p>
+        </footer>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
